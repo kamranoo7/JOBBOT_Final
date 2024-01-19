@@ -1,0 +1,116 @@
+:root {
+  --bg-0: #ffffff;
+  --bg-1: #d3f7ff;
+  --blob-1: #8011e8;
+  --blob-2: #a6a6f6;
+  --blob-3: hsl(184, 91%, 72%);
+  --blob-4: #eda6f5;
+}
+
+.container {
+  height: 400px;
+  width: 400px;
+  background: #000;
+}
+
+.blobs {
+  position: relative; 
+}
+
+.blob {
+  animation: rotate 25s infinite alternate ease-in-out;
+  transform-origin: 50% 50%;
+  opacity: 0.9;
+  backdrop-filter: blur(10px);
+
+  path {
+    animation: blob-anim 5s infinite alternate
+      cubic-bezier(0.45, 0.2, 0.55, 0.8);
+    transform-origin: 50% 50%;
+    transform: scale(0.8);
+    transition: fill 800ms ease;
+  }
+  &.alt {
+    animation-direction: alternate-reverse;
+    opacity: 0.8;
+  }
+}
+
+.blob svg {
+  width: 20%;
+}
+
+.blob-1 path {
+  fill: var(--blob-1);
+  animation: rotate 3s infinite alternate ease-in-out;
+}
+
+.blob-2 path {
+  fill: var(--blob-2);
+  animation: moveLefttoRight 5s infinite  ease-in-out;
+}
+
+.blob-3 path {
+  fill: var(--blob-3);
+  animation: squezze 2s infinite  ease-in-out;
+}
+
+.blob-4 path {
+  fill: var(--blob-4);
+  animation: colorChange 2s infinite  ease-in-out;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(270deg);
+  }
+}
+
+
+
+@keyframes colorChange {
+  from {
+    transform: scale(0.4);
+    opacity: 0.8;
+    fill: rgb(243, 157, 157);
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+    fill: #eda6f5;
+  }
+}
+
+
+@keyframes moveLefttoRight {
+  from {
+    transform: translateX(-1%);
+  }
+  to {
+    transform: translateX(5%);
+  }
+
+}
+
+@keyframes squezze {
+  from {
+    transform: scale(0.78);
+    opacity: 0.4;
+  }
+  to {
+    transform: scale(0.4);
+
+    opacity: 1;
+  }
+}
+
+.blobs.animate  path {
+  animation-play-state: running;
+}
+
+.blobs:not(.animate)  path {
+  animation-play-state: paused;
+}

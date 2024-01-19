@@ -1,0 +1,386 @@
+2024-01-16 15:39:57
+'NoneType' object has no attribute 'lower'
+
+
+
+
+2024-01-16 15:40:27
+'NoneType' object has no attribute 'lower'
+
+
+
+
+2024-01-16 15:40:32
+'NoneType' object has no attribute 'lower'
+
+
+
+
+2024-01-16 15:44:41
+name 'sufficent' is not defined
+
+
+
+
+2024-01-16 15:44:44
+name 'sufficent' is not defined
+
+
+
+
+2024-01-16 15:47:17
+name 'sufficent' is not defined
+
+
+
+
+2024-01-16 15:47:35
+name 'sufficent' is not defined
+
+
+
+
+2024-01-16 15:47:41
+name 'sufficent' is not defined
+
+
+
+
+2024-01-16 15:48:29
+name 'sufficent' is not defined
+
+
+
+
+2024-01-16 15:52:27
+400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+
+
+
+
+2024-01-16 16:59:35
+Error code: 400 - {'error': {'message': 'The audio file could not be decoded or its format is not supported.', 'type': 'invalid_request_error', 'param': None, 'code': None}}
+
+
+
+
+2024-01-16 17:06:31
+'NoneType' object has no attribute 'lower'
+
+
+
+
+2024-01-16 17:06:41
+'NoneType' object has no attribute 'lower'
+
+
+
+
+2024-01-16 17:06:45
+'NoneType' object has no attribute 'lower'
+
+
+
+
+2024-01-16 17:13:47
+400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+
+
+
+
+2024-01-16 17:15:51
+400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+
+
+
+
+2024-01-16 17:41:48
+400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+
+
+
+
+2024-01-16 19:15:18
+400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+
+
+
+
+2024-01-16 19:16:33
+400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+
+
+
+
+2024-01-16 19:24:35
+400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+
+
+
+
+2024-01-16 23:48:48
+400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+
+
+
+
+2024-01-16 23:50:37
+400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+
+
+
+
+2024-01-16 23:53:17
+'NoneType' object has no attribute 'lower'
+
+
+
+
+2024-01-16 23:53:24
+'NoneType' object has no attribute 'lower'
+
+
+
+
+2024-01-16 23:53:27
+'NoneType' object has no attribute 'lower'
+
+
+
+
+2024-01-16 23:54:07
+400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+
+
+
+
+2024-01-16 23:57:55
+400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+
+
+
+
+2024-01-16 23:58:38
+400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+
+
+
+
+2024-01-16 23:59:22
+400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+
+
+
+
+2024-01-17 00:04:24
+'NoneType' object has no attribute 'choices'
+
+
+
+
+2024-01-17 00:04:49
+400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+
+
+
+
+2024-01-17 00:05:32
+Error code: 400 - {'error': {'message': "Invalid file format. Supported formats: ['flac', 'm4a', 'mp3', 'mp4', 'mpeg', 'mpga', 'oga', 'ogg', 'wav', 'webm']", 'type': 'invalid_request_error', 'param': None, 'code': None}}
+
+
+
+
+2024-01-17 00:05:32
+400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+
+
+
+
+2024-01-17 00:07:09
+400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+
+
+
+
+2024-01-17 00:11:54
+400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+
+
+
+
+2024-01-17 02:49:41
+400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+
+
+
+
+2024-01-17 02:53:06
+400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+
+
+
+
+2024-01-17 02:54:59
+400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+
+
+
+
+2024-01-17 03:02:12
+400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+
+
+
+
+2024-01-17 03:09:49
+400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+
+
+
+
+2024-01-17 03:14:01
+400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+
+
+
+
+2024-01-17 03:16:44
+400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+
+
+
+
+2024-01-17 03:19:51
+400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+
+
+
+
+2024-01-17 03:20:32
+400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+
+
+
+
+2024-01-17 03:27:11
+400 Bad Request: The browser (or proxy) sent a request that this server could not understand.
+
+
+
+
+2024-01-17 03:50:25
+Error code: 400 - {'error': {'message': "Invalid file format. Supported formats: ['flac', 'm4a', 'mp3', 'mp4', 'mpeg', 'mpga', 'oga', 'ogg', 'wav', 'webm']", 'type': 'invalid_request_error', 'param': None, 'code': None}}
+
+
+
+
+2024-01-17 10:06:52
+'Transcription' object has no attribute 'lower'
+
+
+
+
+2024-01-17 10:07:08
+'Transcription' object has no attribute 'lower'
+
+
+
+
+2024-01-17 10:22:04
+name 'ession' is not defined
+
+
+
+
+2024-01-17 10:22:15
+name 'ession' is not defined
+
+
+
+
+2024-01-17 10:31:17
+can only concatenate str (not "NoneType") to str
+
+
+
+
+2024-01-18 16:02:12
+Error code: 400 - {'error': {'message': "Invalid file format. Supported formats: ['flac', 'm4a', 'mp3', 'mp4', 'mpeg', 'mpga', 'oga', 'ogg', 'wav', 'webm']", 'type': 'invalid_request_error', 'param': None, 'code': None}}
+
+
+
+
+2024-01-18 16:21:17
+can only concatenate str (not "NoneType") to str
+
+
+
+
+2024-01-18 16:22:48
+can only concatenate str (not "NoneType") to str
+
+
+
+
+2024-01-19 01:59:52
+can only concatenate str (not "NoneType") to str
+
+
+
+
+2024-01-19 02:07:19
+can only concatenate str (not "NoneType") to str
+
+
+
+
+2024-01-19 02:15:52
+can only concatenate str (not "NoneType") to str
+
+
+
+
+2024-01-19 02:54:57
+can only concatenate str (not "NoneType") to str
+
+
+
+
+2024-01-19 04:00:16
+can only concatenate str (not "NoneType") to str
+
+
+
+
+2024-01-19 04:35:48
+can only concatenate str (not "NoneType") to str
+
+
+
+
+2024-01-19 04:38:07
+Error code: 400 - {'error': {'message': 'Audio file is too short. Minimum audio length is 0.1 seconds.', 'type': 'invalid_request_error', 'param': 'file', 'code': 'audio_too_short'}}
+
+
+
+
+2024-01-19 05:22:08
+can only concatenate str (not "NoneType") to str
+
+
+
+
+2024-01-19 06:11:59
+can only concatenate str (not "NoneType") to str
+
+
+
+
+2024-01-19 06:13:45
+can only concatenate str (not "NoneType") to str
+
+
+
+
+2024-01-19 07:50:14
+can only concatenate str (not "NoneType") to str

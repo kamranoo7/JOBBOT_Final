@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 40" width="200" height="40" fill="#3498db">
+  <path id="wave-path" d="M0 0 Q5 5 10 0 T20 0 T30 0 T40 0 T50 0 T60 0 T70 0 T80 0 T90 0 T100 0" fill="transparent" />
+
+  <circle cx="10" cy="20" r="4">
+    <animateMotion dur="1s" repeatCount="indefinite" keyPoints="0;1;0">
+      <mpath href="#wave-path" />
+    </animateMotion>
+  </circle>
+  <circle cx="30" cy="20" r="4">
+    <animateMotion dur="1s" repeatCount="indefinite" keyPoints="0;1;0">
+      <mpath href="#wave-path" />
+    </animateMotion>
+  </circle>
+  <circle cx="50" cy="20" r="4">
+    <animateMotion dur="1s" repeatCount="indefinite" keyPoints="0;1;0">
+      <mpath href="#wave-path" />
+    </animateMotion>
+  </circle>
+  <circle cx="70" cy="20" r="4">
+    <animateMotion dur="1s" repeatCount="indefinite" keyPoints="0;1;0">
+      <mpath href="#wave-path" />
+    </animateMotion>
+  </circle>
+  <circle cx="90" cy="20" r="4">
+    <animateMotion dur="1s" repeatCount="indefinite" keyPoints="0;1;0">
+      <mpath href="#wave-path" />
+    </animateMotion>
+  </circle>
+  <circle cx="110" cy="20" r="4">
+    <animateMotion dur="1s" repeatCount="indefinite" keyPoints="0;1;0">
+      <mpath href="#wave-path" />
+    </animateMotion>
+  </circle>
+  <circle cx="130" cy="20" r="4">
+    <animateMotion dur="1s" repeatCount="indefinite" keyPoints="0;1;0">
+      <mpath href="#wave-path" />
+    </animateMotion>
+  </circle>
+</svg>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Control Panel</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #000000;
+        margin: 0;
+        padding: 0;
+        color: white;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      .headingBox {
+        background: white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 2rem;
+      }
+
+      .headingBox h1 {
+        color: #000000;
+        text-align: center;
+      }
+
+      .headingBox button {
+        background: #000;
+        padding: 10px;
+        border: none;
+        border-radius: 10px;
+      }
+
+      form {
+        background: rgb(0, 0, 0);
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      label {
+        font-weight: bold;
+        color: #ffffff;
+      }
+
+      input[type="text"],
+      textarea {
+        width: 100%;
+        padding: 10px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        background: #000;
+        color: rgb(199, 198, 198);
+        font-size: 1rem;
+      }
+
+      input[type="submit"] {
+        width: 100%;
+        background-color: #4caf50;
+        color: rgb(255, 255, 255);
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+
+      input[type="submit"]:hover {
+        background-color: #45a049;
+      }
+
+      a {
+        text-decoration: none;
+        color: #fff;
+      }
+
+      button {
+        background-color: #008cba;
+        border: none;
+        color: white;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-radius: 4px;
+      }
+
+
+      #language{
+        background: black;
+        color: white;
+        padding: 10px;
+        width: 100%;
+        margin-bottom: 1rem;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="headingBox">
+      <h1>Control Panel</h1>
+      <button>
+        <a href="/chat" onclick="playSoundEffect(interfaceSound);">Home Page</a>
+      </button>
+    </div>
+    <form action="/control_panel" method="post">
+        <label for="language">Language:</label><br />
+        <select id="language" name="language"         value="{{ language }}">
+            <option value="arabic" {% if language == 'arabic' %}selected{% endif %}>Arabic</option>
+            <option value="kannada" {% if language == 'kannada' %}selected{% endif %}>Kannada</option>
+            <option value="telugu" {% if language == 'telugu' %}selected{% endif %}>Telugu</option>
+            <option value="spanish" {% if language == 'spanish' %}selected{% endif %}>Spanish</option>
+            <option value="hebrew" {% if language == 'hebrew' %}selected{% endif %}>Hebrew</option>
+            <option value="japanese" {% if language == 'japanese' %}selected{% endif %}>Japanese</option>
+            <option value="korean" {% if language == 'korean' %}selected{% endif %}>Korean</option>
+            <option value="hindi" {% if language == 'hindi' %}selected{% endif %}>Hindi</option>
+            <option value="bengali" {% if language == 'bengali' %}selected{% endif %}>Bengali</option>
+            <option value="tamil" {% if language == 'tamil' %}selected{% endif %}>Tamil</option>
+            <option value="urdu" {% if language == 'urdu' %}selected{% endif %}>Urdu</option>
+            <option value="chinese" {% if language == 'chinese' %}selected{% endif %}>Chinese</option>
+            <option value="french" {% if language == 'french' %}selected{% endif %}>French</option>
+            <option value="german" {% if language == 'german' %}selected{% endif %}>German</option>
+            <option value="english" {% if language == 'english' %}selected{% endif %}>English</option>
+          </select><br />
+          
+      
+        <label for="intro">Introduction Text:</label><br />
+        <textarea id="intro" name="intro" rows="4" cols="50">{{ intro }}</textarea><br />
+      
+        <label for="prompt_level1">Level 1 Prompt:</label><br />
+        <textarea id="prompt_level1" name="prompt_level1" rows="4" cols="50">{{ prompt_level1 }}</textarea><br />
+      
+        <label for="prompt_level2">Level 2 Prompt:</label><br />
+        <textarea id="prompt_level2" name="prompt_level2" rows="4" cols="50">{{ prompt_level2 }}</textarea><br />
+      
+        <label for="prompt_level3">Level 3 Prompt:</label><br />
+        <textarea id="prompt_level3" name="prompt_level3" rows="4" cols="50">{{ prompt_level3 }}</textarea><br />
+      
+        <!-- <input type="submit" value="Submit" /> -->
+        <input type="submit" value="Submit" onclick="playSoundEffect(submitSound);" />
+
+      </form>
+      <script>
+        const submitSound = "/static/sounds/submit.mp3";
+        const interfaceSound = "/static/sounds/bubble.mp3";
+        // const interfaceSound = "bubble.mp3";
+        // const submitSound = "bubble.mp3";
+
+        function playSoundEffect(audioUrl) {
+          console.log("Playing", audioUrl)
+          var audio = new Audio(audioUrl);
+          audio.play();
+        }
+      </script>
+  </body>
+</html>

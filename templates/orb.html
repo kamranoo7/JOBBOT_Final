@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Jobot</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            background-color: #000;
+            font-family: 'Montserrat', sans-serif;
+            color: white;
+            text-align: left;
+            overflow: hidden;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            position: relative;
+        }
+
+        .instruction {
+            margin-right: 20px;
+            font-size: 20px;
+            font-weight: 700;
+        }
+
+        .sphere {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background: radial-gradient(circle, #007bff, #0000);
+            position: relative;
+            z-index: 2;
+        }
+
+        .glowing {
+            animation: glowing 2s infinite alternate;
+        }
+
+        @keyframes glowing {
+            0% {
+                box-shadow: 0 0 30px #007bff, 0 0 60px #007bff;
+            }
+            50% {
+                box-shadow: 0 0 40px #007bff, 0 0 80px #007bff, 0 0 120px #007bff;
+            }
+            100% {
+                box-shadow: 0 0 50px #007bff, 0 0 100px #007bff, 0 0 150px #007bff;
+            }
+        }
+
+        .circle {
+            position: absolute;
+            border-radius: 50%;
+            background: none;
+            border: 2px solid #ff1493; /* Darker pink color */
+            animation: expandCircle 3s linear forwards;
+        }
+
+        @keyframes expandCircle {
+            from {
+                width: 150px;
+                height: 150px;
+                opacity: 1;
+                transform: translate(-75px, -75px);
+            }
+            to {
+                width: 200vw;
+                height: 200vw;
+                opacity: 0;
+                transform: translate(-100vw, -100vw);
+            }
+        }
+
+        .dropdown-container {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            text-align: center;
+            padding: 10px 0;
+            background-color: #000; /* Black background */
+        }
+
+        #languageDropdown {
+            color: white; /* White text color for contrast */
+            background-color: black;
+            border: 1px solid white;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        @media only screen and (max-width: 600px) {
+    .instruction {
+        font-size: 16px; /* Smaller text on small screens */
+    }
+    .sphere {
+        width: 50px;
+        height: 50px; /* Smaller sphere on small screens */
+    }
+    /* Add more responsive styles here */
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="instruction">Select language.</div>
+        <div class="sphere"></div>
+    </div>
+    <div class="dropdown-container">
+        <select id="languageDropdown">
+            <option value="auto">auto</option>
+            <option value="arabic">Arabic</option>
+            <option value="english">English</option>
+            <option value="spanish">Spanish</option>
+            <option value="hindi">Hindi</option>
+        </select>
+    </div>
+    <script>
+        const sphere = document.querySelector('.sphere');
+    let isGlowing = false;
+    let mediaRecorder;
+    let audioChunks = [];
+    const voiceSound = "/static/sounds/audio.mp3";
+
+    function playSoundEffect(audioUrl) {
+        var audio = new Audio(audioUrl);
+        audio.play();
+      }
+    sphere.addEventListener('click', function() {
+        if (!isGlowing) {
+          playSoundEffect(voiceSound);
+
+            // Request audio permission on click
+            navigator.mediaDevices.getUserMedia({ audio: true })
+                .then(stream => {
+                    mediaRecorder = new MediaRecorder(stream);
+                    mediaRecorder.ondataavailable = event => {
+                        audioChunks.push(event.data);
+                    };
+                    mediaRecorder.onstop = () => {
+                        const audioBlob = new Blob(audioChunks, { 'type' : 'audio/wav' });
+                        audioChunks = [];
+                        sendAudioToServer(audioBlob);
+                    };
+
+                    this.classList.add('glowing');
+                    isGlowing = true;
+                    mediaRecorder.start();
+                })
+                .catch(error => {
+                    console.error('Permission denied or error:', error);
+                });
+        } else {
+            this.classList.remove('glowing');
+            isGlowing = false;
+            playSoundEffect(voiceSound);
+
+            mediaRecorder.stop();
+        }
+    });
+
+        function sendAudioToServer(audioBlob) {
+            const formData = new FormData();
+            formData.append('audioFile', audioBlob);
+            const selectedLanguage = document.getElementById('languageDropdown').value;
+            formData.append('language', selectedLanguage);
+            fetch('/upload_audio', {
+    method: 'POST',
+    body: formData
+})
+.then(response => response.json()) // Convert the response to JSON
+.then(data => {
+    // Redirect based on the channel name received
+    if (data.channel) {
+        window.location.href = '/' + data.channel;
+    } else {
+        console.error('Channel name not received');
+    }
+})
+.catch(error => console.error('There has been a problem with your fetch operation:', error));
+
+        }
+        function createCircle() {
+            const circle = document.createElement('div');
+            circle.classList.add('circle');
+            circle.style.left = '50%';
+            circle.style.top = '50%';
+            sphere.appendChild(circle);
+
+            setTimeout(() => circle.remove(), 3000); // Remove circle after animation
+        }
+        
+    </script>
+</body>
+</html>
